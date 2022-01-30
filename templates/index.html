@@ -1,1 +1,41 @@
-<h1>Hello Flask!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        span {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        div {
+            border: 2px solid black; 
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body style="align-items: center; padding-top: 50px; width: device-width">
+    <span>
+    {% for x in range(0,times): %}
+        {% if x%4 != 0 %}
+        <div style="display: inline-flex; background-color: {{ color }};"></div>
+        {% else %}
+        <div style="display: flex; background-color: {{ color }};"></div>
+        {% endif %}
+    {% endfor %}
+    </span>
+</body>
+</html>
